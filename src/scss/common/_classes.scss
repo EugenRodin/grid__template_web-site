@@ -1,0 +1,41 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.btn {
+  background-color: rgba($color-white, 0.1);
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+}
+.btn--light {
+  background-color: rgba($color-primary, 0.8);
+  border-color: $color-white;
+  min-width: 250px;
+  min-height: 60px;
+}
+.btn--primary {
+  border-color: $color-primary;
+  min-height: 60px;
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    min-width: 100%;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
