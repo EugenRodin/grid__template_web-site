@@ -24,15 +24,22 @@ h1 {
   line-height: 1.2em;
 }
 h2 {
+  color: $color-primary;
 
+  letter-spacing: 0.1em;
+  line-height: 1.25em;
 }
 h3 {
-
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+  color: $color-gray;
+  font-size: 1.125rem;
 }
-h4 {
 
-}
 a {
   color: $color-white;
   text-decoration: none;
+}
+p {
+  color: $color-gray;
 }
