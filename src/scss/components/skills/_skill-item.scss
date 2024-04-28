@@ -1,13 +1,18 @@
-@use "../../../presets" as *;
-@use "../../../mixins" as *;
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
 
 .skill-item {
     position: relative;
-  overflow: hidden;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: $gap;
 
   &__title {
-    @include abs-position;
     z-index: 1;
+    @include abs-position;
     margin: 0;
     letter-spacing: 0.1em;
     @include md-min{
@@ -24,22 +29,26 @@
     justify-content: center;
     padding: $gap;
     height: 100%;
-    transition: color 0.3s;
+    transition: color 0.5s;
   }
   &__image {
     background-color: $color-primary;
-    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    
     @include abs-position;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
   }
   &__overlay {
-    background-color: rgba($color-primary, 0.9);
+    transition: opacity 0.5s;
+    opacity: 0.8;
+    background-color: $color-primary;
     @include abs-position;
-    transition: opacity 0.3s;
+    
   }
   &:hover {
     .skill-item__overlay {
-      opacity: 0.95;
+      opacity: 0.95 !important;
     }
     .skill-item__image{
       transform: scale(1.1);
@@ -49,6 +58,8 @@
     }
   }
 }
+$count: 9;
+
 @for $i from 1 through 9 {
   .skill-item:nth-of-type(#{$i}) {
     grid-area: a#{$i};
