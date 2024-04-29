@@ -31,7 +31,7 @@
   &__content {
     p {
       @include lg-min {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
 
       &:first-of-type {

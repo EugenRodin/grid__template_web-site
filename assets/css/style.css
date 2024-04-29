@@ -203,7 +203,6 @@ h1 {
   letter-spacing: 0.078em;
 
   font-family: "Roboto Slab", serif;
-  font-size: 3.75rem;
   font-weight: 300;
   line-height: 1.2em;
 }
@@ -214,7 +213,7 @@ h2 {
   color: #2d3651;
 
   font-family: "Roboto Slab", serif;
-  line-height: 1.25em;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -223,7 +222,6 @@ h3 {
   color: #637588;
 
   font-size: 1.125rem;
-  line-height: 1.2em;
 }
 
 a {
@@ -252,13 +250,9 @@ p {
   -webkit-transition: background-color 0.5s, border-color 0.5s, opacity 0.5s;
           transition: background-color 0.5s, border-color 0.5s, opacity 0.5s;
   letter-spacing: 0.1em;
-  letter-spacing: 0.1em;
 
   border-width: 2px;
   border-style: solid;
-  background-color: rgba(255, 255, 255, 0.1);
-
-  font-size: 1.25em;
 }
 .btn:hover,
 .btn:focus {
@@ -275,6 +269,8 @@ p {
 
   border-color: #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
+
+  font-size: 1.125rem;
 }
 
 .visually-hidden {
@@ -675,11 +671,11 @@ p {
   letter-spacing: 0.15em;
 
   color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-bottom-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
 
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .form-item__input::-webkit-input-placeholder {
   color: #637588;
@@ -698,9 +694,29 @@ p {
 }
 .form-item__input:hover,
 .form-item__input:focus {
-  border-color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.form-item__input:hover::-webkit-input-placeholder,
+.form-item__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover::-moz-placeholder,
+.form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover:-ms-input-placeholder,
+.form-item__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover::-ms-input-placeholder,
+.form-item__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+.form-item__input:hover::placeholder,
+.form-item__input:focus::placeholder {
+  color: #8c9bab;
 }
 
 .posts__grid {
@@ -927,6 +943,9 @@ p {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+  h1 {
+    font-size: 3.75rem;
+  }
   h2 {
     margin-bottom: 3rem;
 
@@ -950,7 +969,7 @@ p {
     grid-template-columns: 1fr 271px;
   }
   .about__content p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   .about__content p:first-of-type::before {
     right: 2px;
@@ -965,6 +984,9 @@ p {
   .about {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+  h1 {
+    font-size: 2.5rem;
   }
   h2 {
     margin-bottom: 2.625rem;
@@ -999,6 +1021,9 @@ p {
   .about {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  h1 {
+    font-size: 1.875rem;
   }
   .btn--light {
     min-width: 170px;
@@ -1035,7 +1060,7 @@ p {
     padding: 10px 20px;
   }
   .skill-item__title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {

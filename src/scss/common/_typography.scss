@@ -17,18 +17,28 @@ body {
 }
 
 h1 {
-  font-size: 3.75rem;
+  letter-spacing: 0.078em;
+
   font-family: $font-header;
   font-weight: 300;
-  letter-spacing: 0.078em;
   line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
 }
 h2 {
   color: $color-primary;
   font-family: $font-header;
 
   letter-spacing: 0.1em;
-  line-height: 1.25em;
+  line-height: 1.2em;
 
   @include lg-min {
     margin-bottom: 3rem;
@@ -55,7 +65,7 @@ h2 {
 }
 h3 {
   letter-spacing: 0.05em;
-  line-height: 1.2em;
+  
   color: $color-gray;
   font-size: 1.125rem;
 }
